@@ -2,7 +2,7 @@ class ArticlesController < ApplicationController
 	# A controller is simply a class that is defined to inherit from ApplicationController.
 	# Add a before_filter to any controller that you want to secure.
 	# This will force user's to login before they can see the actions in this controller.
-	before_filter :authorize
+	# before_filter :authorize
 	
 	def index
 		# renders view

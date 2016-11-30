@@ -1,0 +1,79 @@
+<nav class="navbar navbar-inverse">
+
+	<button type="button" class="btn btn-default" aria-label="Left Align">
+		<a href="/"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a>
+	</button>
+
+	<% if current_user %>
+	|
+	<a href="/logout"><button type="button" class="btn btn-info btn-sm">Logout</button></a>
+	<% else %>
+	|
+	<!-- Trigger the modal with a button -->
+	<button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#login">Login</button>
+
+	<!-- Modal -->
+	<div id="login" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">Login</h4>
+				</div>
+				<div class="modal-body">
+					<%= form_tag '/login' do %>
+
+					Email: <%= text_field_tag :email %>
+					Password: <%= password_field_tag :password %>
+					<%= submit_tag "Submit" %>
+
+					<% end %>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	|
+	<!-- Trigger the modal with a button -->
+	<button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#signup">Signup</button>
+
+	<!-- Modal -->
+	<div id="signup" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">Please Signup!</h4>
+				</div>
+				<div class="modal-body">
+					<%= form_for :user, url: '/users' do |f| %>
+
+					Name: <%= f.text_field :name %></br></br>
+					Email: <%= f.text_field :email %></br></br>
+					Password: <%= f.password_field :password %></br></br>
+					Password Confirmation: <%= f.password_field :password_confirmation %></br></br>
+					<%= f.submit "Submit" %>
+
+					<% end %>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<% end %>
+
+</nav>
+
+
+

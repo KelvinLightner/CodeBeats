@@ -1,11 +1,21 @@
-<h1>Signup!</h1>
+<div class="center_of_page">
+	<div class="jumbotron parallax4">
+		<div class="welcome">
+			<p>
+			<div class="well well-sm">
+					<h1>Join The Community Today!</h1></br>
 
-<%= form_for :user, url: '/users' do |f| %>
+					<%= form_for :user, url: '/users' do |f| %>
 
-  Name: <%= f.text_field :name %>
-  Email: <%= f.text_field :email %>
-  Password: <%= f.password_field :password %>
-  Password Confirmation: <%= f.password_field :password_confirmation %>
-  <%= f.submit "Submit" %>
+					Name: <%= f.text_field :name %>
+					Email: <%= f.text_field :email %>
+					Password: <%= f.password_field :password %>
+					Password Confirmation: <%= f.password_field :password_confirmation %>
+					<%= f.submit "Submit" %>
 
-<% end %>
+					<% end %>
+				</div>
+			</p>
+		</div>
+	</div>
+</div>

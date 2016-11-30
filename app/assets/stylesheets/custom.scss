@@ -1,0 +1,90 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.welcome {
+	color: black;
+	text-align: center;
+	padding-top: 10%;
+}
+
+.contrast {
+	color: silver;
+}
+
+body, html {
+    height: 70%;
+}
+
+.center_of_page {
+	padding-top: 15%;
+}
+
+.parallax { 
+    /* The image used */
+    background-image: url("http://www.hellawella.com/sites/hellawella.com/files/styles/default/public/images/ThinkstockPhotos-518201195.jpg?itok=vL40zi2T");
+
+    /* Full height */
+    height: 100%; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax2 { 
+    /* The image used */
+    background-image: url("http://www.yourgymguru.com/wp-content/uploads/2016/08/working-out-benefit.jpg");
+
+    /* Full height */
+    height: 100%; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax3 { 
+    /* The image used */
+    background-image: url("https://www.pickthebrain.com/blog/wp-content/uploads/2016/01/Screen-Shot-2016-02-01-at-10.11.24-AM.png");
+
+    /* Full height */
+    height: 100%; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax4 { 
+    /* The image used */
+    background-image: url("http://az616578.vo.msecnd.net/files/2016/06/04/636006584769268932-1690737098_536898581.jpg");
+
+    /* Full height */
+    height: 100%; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax5 { 
+    /* The image used */
+    background-image: url("http://media.new.mensxp.com/media/content/2015/Dec/reasons-your-fat-isn-rsquo-t-melting-despite-working-out1-1451561240.jpg");
+
+    /* Full height */
+    height: 100%; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

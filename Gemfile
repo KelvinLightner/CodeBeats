@@ -30,6 +30,8 @@ gem 'bcrypt', '~> 3.1.7'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+gem 'bootstrap-sass'
+# gem 'faker','~> 1.6'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -55,7 +57,7 @@ gem 'binding_of_caller'
 # for heroku betterment
 gem 'rails_12factor', group: :production
 gem 'hirb'
-gem 'bcrypt', '~> 3.1.7'
+# gem 'bcrypt', '~> 3.1.7'
 gem 'pry-rails'
 gem 'rb-readline'
 gem 'capybara'
