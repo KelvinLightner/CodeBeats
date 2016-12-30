@@ -1,0 +1,93 @@
+<div class="jumbotron parallax">
+  <div class="welcome">
+    <div class="page-header">
+      <h1>The Workout Zone</h1>
+    </div>
+    <p>A Space to Post Your Most Effective Workouts And Read Others</p>
+  </div>
+</div>
+
+<h1>Top Posts</h1>
+
+<div class="row">
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img src="http://cdn-mf1.heartyhosting.com/sites/mensfitness.com/files/things-you-got-wrong-about-working-out-main.jpg" alt="run">
+      <div class="caption">
+        <% article1 = @articles[0] %>
+        <h3><%= article1.title %></h3>
+        <p>
+          <p><a href="/articles/<%= article1.id %>" class="btn btn-primary" role="button">Read Article</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-6 col-md-4">
+      <div class="thumbnail">
+        <img src="http://s3.amazonaws.com/etntmedia/media/images/ext/789187520/stop-working-out-lead.jpg" alt="pushupz">
+        <div class="caption">
+          <% article2 = @articles[1] %>
+          <h3><%= article2.title %></h3>
+          <p>
+            <p><a href="/articles/<%= article2.id %>" class="btn btn-primary" role="button">Read Article</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+          <img src="http://i.huffpost.com/gen/1319881/images/o-GYM-facebook.jpg" alt="core">
+          <div class="caption">
+            <% article3 = @articles[2] %>
+            <h3><%= article3.title %></h3>
+            <p>
+              <p><a href="/articles/<%= article3.id %>" class="btn btn-primary" role="button">Read Article</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="jumbotron parallax2">
+      <div class="welcome contrast">
+      <h1>Connect</h1>
+        <p>Join the Community and Achieve Your Goals With Others</p>
+        <a href="/users/new"><button class="btn btn-default">Join TODAY!</button></a>
+      </div>
+      </div>
+
+      <div class="jumbotron parallax3">
+        <div class="welcome contrast">
+          <h1>Thrive</h1>
+          <p>Receive Encouragement From A Large Network</p>
+          <a href="/articles/new"><button class="btn btn-default">Write a Post</button></a> 
+        </div>
+      </div>
+
+      <div class="container">
+        <h3>Here is a list of the Articles:</h3>
+
+        <table>
+          <tr>
+            <th>Title</th>
+            <th>Text</th>
+          </tr>
+
+          <% @articles.each do |article| %>
+          <tr>
+            <td><%= article.title %></td>
+            <td><%= article.text %></td>
+            <td><button><%= link_to 'Show', article_path(article) %></button></td>
+            <td><button><%= link_to 'Edit', edit_article_path(article) %></button></td>
+            <td><button><%= link_to 'Delete', article_path(article),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></button></td>
+              <!-- Rails will first show a confirm dialog to the user, and then submit the link with method delete -->
+            </tr>
+            <% end %>
+          </table>
+
+          <button><%= link_to 'New Article', new_article_path %></button>
+        </div>
